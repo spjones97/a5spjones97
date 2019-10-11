@@ -65,11 +65,11 @@ public class IngredientPortionImpl implements IngredientPortion{
 			return this;
 		}
 		if (other.getAmount()<0) {
-			throw new RuntimeException("IngredientPortion must have the same amount");
+			throw new RuntimeException("IngredientPortion amount must be greater than or equal to zero");
 		}
 		
-		if (!this.getName().equals(other.getName())) {
-			throw new RuntimeException("IngredientPortion must be same");
+		if (!(getIngredient().equals(other.getIngredient()))) {
+			throw new RuntimeException("Ingredients must be same");
 		}
 		
 		IngredientPortion ingredientPortion = new IngredientPortionImpl(ingredient, amount + other.getAmount());
