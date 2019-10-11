@@ -1,5 +1,6 @@
 package a5;
 
+// Create Plate Price Exception class
 public class PlatePriceException extends Exception{
 	
 	private double price;

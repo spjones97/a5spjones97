@@ -1,5 +1,6 @@
 package a5;
 
+// Create Ingredient Portion Implementation class
 public class IngredientPortionImpl implements IngredientPortion{
 	
 	private Ingredient ingredient;

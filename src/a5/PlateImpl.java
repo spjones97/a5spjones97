@@ -1,5 +1,6 @@
 package a5;
 
+// Create Plate Implementation class
 public class PlateImpl implements Plate{
 
 	private Sushi contents;

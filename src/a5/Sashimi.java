@@ -1,5 +1,6 @@
 package a5;
 
+// Create Sashimi class
 public class Sashimi implements Sushi{
 	public enum SashimiType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP};
 	

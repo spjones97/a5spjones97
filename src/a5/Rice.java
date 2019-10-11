@@ -1,5 +1,6 @@
 package a5;
 
+// Create Rice class
 public class Rice extends IngredientImpl {
 
 	public Rice() {

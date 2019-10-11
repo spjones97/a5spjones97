@@ -1,5 +1,6 @@
 package a5;
 
+// Create Tuna class
 public class Tuna extends IngredientImpl {
 	
 	public Tuna() {

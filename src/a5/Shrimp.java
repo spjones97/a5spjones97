@@ -1,5 +1,6 @@
 package a5;
 
+// Create Shrimp class
 public class Shrimp extends IngredientImpl {
 
 	public Shrimp() {

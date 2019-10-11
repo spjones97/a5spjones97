@@ -1,5 +1,6 @@
 package a5;
 
+// Create Gold Plate class
 public class GoldPlate extends PlateImpl{
 	
 	public GoldPlate(Sushi contents, double price) throws PlatePriceException {

@@ -1,5 +1,6 @@
 package a5;
 
+// Create Avocado class
 public class Avocado extends IngredientImpl {
 
 	public Avocado() {

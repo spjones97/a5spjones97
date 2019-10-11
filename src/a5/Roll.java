@@ -1,5 +1,6 @@
 package a5;
 
+// Create Roll class
 public class Roll implements Sushi{
 	protected String ingredientName;
 	protected IngredientPortion[] ingredientPortionArray;

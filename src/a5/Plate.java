@@ -1,5 +1,6 @@
 package a5;
 
+// Create Plate interface
 public interface Plate { 
 		   public enum Color {RED, GREEN, BLUE, GOLD};
 		   Sushi getContents(); 

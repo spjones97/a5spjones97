@@ -1,5 +1,6 @@
 package a5;
 
+// Create Seaweed class
 public class Seaweed extends IngredientImpl {
 
 	public Seaweed() {

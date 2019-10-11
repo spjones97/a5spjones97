@@ -1,5 +1,6 @@
 package a5;
 
+// Create Eel Portion class
 public class EelPortion extends IngredientPortionImpl{
 
 	public EelPortion(double _amount) {

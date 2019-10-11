@@ -1,5 +1,6 @@
 package a5;
 
+// Create Crab class
 public class Crab extends IngredientImpl {
 
 	public Crab() {

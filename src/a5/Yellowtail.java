@@ -1,5 +1,6 @@
 package a5;
 
+// Create Yellowtail class
 public class Yellowtail extends IngredientImpl {
 
 	public Yellowtail() {

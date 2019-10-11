@@ -1,5 +1,6 @@
 package a5;
 
+// Create Sushi interface
 public interface Sushi {
 	
 	String getName();

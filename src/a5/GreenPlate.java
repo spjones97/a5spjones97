@@ -1,5 +1,6 @@
 package a5;
 
+// Create Green Plate class
 public class GreenPlate extends PlateImpl{
 	
 	public GreenPlate(Sushi contents) throws PlatePriceException {

@@ -1,5 +1,6 @@
 package a5;
 
+// Create Ingredient Implementation class
 public class IngredientImpl implements Ingredient{
 
 	private String ingredientName;
