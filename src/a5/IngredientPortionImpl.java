@@ -69,7 +69,7 @@ public class IngredientPortionImpl implements IngredientPortion{
 		
 		}
 		
-		if (!getIngredient().equals(otherPortion.getIngredient())) {
+		if (!this.equals(otherPortion)) {
 			throw new RuntimeException("IngredientPortion must be same");
 		}
 		
