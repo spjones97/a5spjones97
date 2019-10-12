@@ -1,4 +1,4 @@
-package a4;
+package a5;
 
 public class Yellowtail extends IngredientImpl {
 	public Yellowtail() {

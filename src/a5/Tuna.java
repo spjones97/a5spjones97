@@ -1,4 +1,4 @@
-package a4;
+package a5;
 
 // Create Tuna class
 public class Tuna extends IngredientImpl {

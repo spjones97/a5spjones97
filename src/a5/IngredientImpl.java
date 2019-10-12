@@ -1,4 +1,4 @@
-package a4;
+package a5;
 
 // Ingredient implementation class
 public class IngredientImpl implements Ingredient{

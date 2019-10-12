@@ -1,4 +1,4 @@
-package a4;
+package a5;
 
 // Create Eel class
 public class Eel extends IngredientImpl {

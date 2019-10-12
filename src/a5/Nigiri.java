@@ -1,4 +1,4 @@
-package a4;
+package a5;
 
 // Create Nigiri class
 public class Nigiri implements Sushi{
