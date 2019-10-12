@@ -1,4 +1,4 @@
-package a5;
+package a4;
 
 // Create Sushi interface
 public interface Sushi {

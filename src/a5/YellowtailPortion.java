@@ -1,6 +1,6 @@
-package a5;
+package a4;
 
-// Create Yellowtail portion class
+// Create YellowtailPortion class
 public class YellowtailPortion extends IngredientPortionImpl{
 
 	public YellowtailPortion (double _amount) {

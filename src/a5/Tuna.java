@@ -1,4 +1,4 @@
-package a5;
+package a4;
 
 // Create Tuna class
 public class Tuna extends IngredientImpl {
@@ -10,11 +10,9 @@ public class Tuna extends IngredientImpl {
 	public boolean getIsRice() {
 		return false;
 	}
-	
 	public boolean getIsVegetarian() {
 		return false;
 	}
-
 	public boolean getIsShellfish() {
 		return false;
 	}

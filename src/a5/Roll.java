@@ -1,7 +1,8 @@
-package a5;
+package a4;
 
 // Create Roll class
 public class Roll implements Sushi{
+
 	protected String ingredientName;
 	protected IngredientPortion[] ingredientPortionArray;
 	
@@ -17,44 +18,44 @@ public class Roll implements Sushi{
 		int counter = 0;
 		int i = 0;
 		
-		IngredientPortion[] ingredientArr = new IngredientPortion[totalLength];
+		IngredientPortion[] ingredientPortions = new IngredientPortion[totalLength];
 		
 		while(i < ingredientPortionArray.length) {
-			if (has(ingredientArr, counter, ingredientPortionArray[i])) {
-				for (int f=0; f<counter; f++) {
-					if (ingredientPortionArray[i].getName().equals(ingredientArr[f].getName())) {
-						ingredientArr[f] = ingredientArr[f].combine(ingredientPortionArray[i]);
+			if (has(ingredientPortions, counter, ingredientPortionArray[i])) {
+				for (int j = 0; j < counter; j++) {
+					if (ingredientPortionArray[i].getName().equals(ingredientPortions[j].getName())) {
+						ingredientPortions[j] = ingredientPortions[j].combine(ingredientPortionArray[i]);
 					}
-				} 					
+				}
 			} else {
-				ingredientArr[counter] = ingredientPortionArray[i];
+				ingredientPortions[counter] = ingredientPortionArray[i];
 				counter++;
 				} 
 			i++;
 			}
 		
 		IngredientPortion seaweedPortion = new SeaweedPortion(0.1);
-		int y = 0;
-		if(has(ingredientArr, counter, seaweedPortion)){
-			while(y < counter) {
-				if((ingredientArr[y].getName().equals("seaweed")) && (ingredientArr[y].getAmount()<0.1)) {
-						IngredientPortion seaweeds = new SeaweedPortion(0.1 - ingredientArr[y].getAmount());
-						ingredientArr[y] = ingredientArr[y].combine(seaweeds);
+		int a = 0;
+		if(has(ingredientPortions, counter, seaweedPortion)){
+			while(a<counter) {
+				if((ingredientPortions[a].getName().equals("seaweed")) && (ingredientPortions[a].getAmount()<0.1)) {
+					IngredientPortion seaweeds = new SeaweedPortion(0.1 - ingredientPortions[a].getAmount());
+					ingredientPortions[a] = ingredientPortions[a].combine(seaweeds);
 				}
-			y++;
+			a++;
 			}
 		} else {
-			ingredientArr[counter] = new SeaweedPortion(0.1);
+			ingredientPortions[counter] = new SeaweedPortion(0.1);
 			counter++;
 		}
 
-		// New set of arrays
 		IngredientPortion[] countArray = new IngredientPortion[counter];
-
-		for (int k = 0; k < counter; k++) {
-			countArray[i] = ingredientArr[i];
-		}
-		ingredientPortionArray = countArray;
+		int b=0;
+		while(b<counter ) {
+			countArray[b]=ingredientPortions[b];
+			b++;
+		}	
+		ingredientPortionArray=countArray;
 		
 }
 	
@@ -69,14 +70,14 @@ public class Roll implements Sushi{
 	
 	public int getCalories() {
 		double result = 0.0;
-		double holder = 0.0;
-		int integer = 0;
+		double hold = 0.0;
+		int calories = 0;
 		for (int i = 0; i < ingredientPortionArray.length; i++) {
-			holder = ingredientPortionArray[i].getCalories();
-			result = result + holder;
+			hold = ingredientPortionArray[i].getCalories();
+			result = result + hold;
 		}
-		integer = (int)(result + 0.5);
-		return integer;
+		calories = (int)(result + 0.5);
+		return calories;
 	}
 	
 	public double getCost() {
@@ -84,8 +85,8 @@ public class Roll implements Sushi{
 		for (int i = 0; i < ingredientPortionArray.length; i++) {
 			result += ingredientPortionArray[i].getCost();
 		}
-		double value = (int)((result * 100.0) + 0.5) / 100.0;
-		return value;
+		double cost = (int)((result * 100.0) + 0.5) / 100.0;
+		return cost;
 	}
 	
 	public boolean getHasRice() {
@@ -98,7 +99,6 @@ public class Roll implements Sushi{
 	}
 	
 	public boolean getHasShellfish() {
-
 		for (int i = 0; i < ingredientPortionArray.length; i++) {
 			if (!ingredientPortionArray[i].getIsShellfish()) {
 				return false;
@@ -108,7 +108,6 @@ public class Roll implements Sushi{
 	}
 
 	public boolean getIsVegetarian() {
-
 		for (int i = 0; i < ingredientPortionArray.length; i++) {
 			if (!ingredientPortionArray[i].getIsVegetarian()) {
 				return false;
@@ -118,12 +117,10 @@ public class Roll implements Sushi{
 	}
 	
 	public static boolean has (IngredientPortion[] ingredientArray, int counter, IngredientPortion ingredientPortion) {
-
 		for (int i = 0; i < counter; i++) {
 			if (ingredientPortion.getName().equals(ingredientArray[i].getName())) {
 				return true;
 			}
-			i++;
 		}
 		return false;
 	}

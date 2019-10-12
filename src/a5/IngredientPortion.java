@@ -1,6 +1,6 @@
-package a5;
+package a4;
 
-// Ingredient Portion interface (DO NOT TOUCH)
+// Ingredient Portion interface
 public interface IngredientPortion {
 	Ingredient getIngredient();
 	String getName();

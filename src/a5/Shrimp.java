@@ -1,4 +1,4 @@
-package a5;
+package a4;
 
 // Create Shrimp class
 public class Shrimp extends IngredientImpl {
@@ -10,11 +10,9 @@ public class Shrimp extends IngredientImpl {
 	public boolean getIsRice() {
 		return false;
 	}
-	
 	public boolean getIsVegetarian() {
 		return false;
 	}
-	
 	public boolean getIsShellfish() {
 		return true;
 	}

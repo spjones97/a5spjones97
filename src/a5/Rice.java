@@ -1,11 +1,10 @@
-package a5;
+package a4;
 
-// Create Rice class
 public class Rice extends IngredientImpl {
-
 	public Rice() {
 		super("rice", .13, 34);
 	}
+	
 	
 	public boolean getIsRice() {
 		return true;

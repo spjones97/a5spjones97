@@ -1,8 +1,7 @@
-package a5;
+package a4;
 
 // Create Nigiri class
 public class Nigiri implements Sushi{
-
 	public enum NigiriType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP};
 	protected String ingredientName;
 	protected IngredientPortion[] ingredientPortionArr;
@@ -11,9 +10,9 @@ public class Nigiri implements Sushi{
 	
 	public Nigiri(NigiriType _type) {
 		
-		int amountIngredients = 2;
+		int amountOfIngredients = 2;
 		
-		ingredientPortionArr = new IngredientPortion[amountIngredients];
+		ingredientPortionArr = new IngredientPortion[amountOfIngredients];
 		ingredientRiceAmount = new RicePortion(0.5);
 		
 
@@ -64,9 +63,11 @@ public class Nigiri implements Sushi{
 		double result = 0;
 		int finalValue = 0;
 		result = ingredientPortionArr[0].getCalories() + ingredientPortionArr[1].getCalories();
+
 //		for(int i=0; i<ingredientPortionArray.length; i++) {
 //			result = result + ingredientPortionArray[i].getCalories();
 //		}
+
 		finalValue = (int)(result + 0.5);
 		
 		return finalValue;
@@ -74,16 +75,16 @@ public class Nigiri implements Sushi{
 
 	@Override
 	public double getCost() {
-		double result = 0;
-		for (int i = 0; i< ingredientPortionArr.length; i++) {
-			result = result + ingredientPortionArr[i].getCost();
+		double cost = 0;
+		for (int i = 0; i < ingredientPortionArr.length; i++) {
+			cost = cost + ingredientPortionArr[i].getCost();
 		}
-		return result;
+		return cost;
 	}
 
 	@Override
 	public boolean getHasRice() {
-		for (int i = 0; i< ingredientPortionArr.length; i++) {
+		for (int i = 0; i < ingredientPortionArr.length; i++) {
 			if (!ingredientPortionArr[i].getIsRice()) {
 				return false;
 			}
@@ -93,7 +94,7 @@ public class Nigiri implements Sushi{
 
 	@Override
 	public boolean getHasShellfish() {
-		for (int i = 0; i< ingredientPortionArr.length; i++) {
+		for (int i = 0; i < ingredientPortionArr.length; i++) {
 			if(ingredientPortionArr[i].getIsShellfish()) {
 				return true;
 			}
@@ -103,7 +104,7 @@ public class Nigiri implements Sushi{
 
 	@Override
 	public boolean getIsVegetarian() {
-		for (int i = 0; i< ingredientPortionArr.length; i++) {
+		for (int i = 0; i < ingredientPortionArr.length; i++) {
 			if(ingredientPortionArr[i].getIsShellfish()) {
 				return true;
 			}

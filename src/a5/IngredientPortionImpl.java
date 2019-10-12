@@ -1,6 +1,6 @@
-package a5;
+package a4;
 
-// Create Ingredient Portion Implementation class
+// Ingredient Portion implementation class
 public class IngredientPortionImpl implements IngredientPortion{
 	
 	private Ingredient ingredient;
@@ -11,7 +11,7 @@ public class IngredientPortionImpl implements IngredientPortion{
 		ingredient = _ingredient;
 		
 		if (amount <= 0) {
-			throw new RuntimeException("amount must be positive");
+			throw new RuntimeException("amount needs to be positive");
 		}
 		
 	}
@@ -60,21 +60,22 @@ public class IngredientPortionImpl implements IngredientPortion{
 	}
 
 	@Override
-	public IngredientPortion combine(IngredientPortion other) {
-		if (other == null) {
+	public IngredientPortion combine(IngredientPortion otherPortion) {
+		if (otherPortion == null) {
 			return this;
 		}
-		if (other.getAmount()<0) {
-			throw new RuntimeException("IngredientPortion amount must be greater than or equal to zero");
+		if (otherPortion.getAmount()<0) {
+			throw new RuntimeException("IngredientPortion must have the same amount");
+		
 		}
 		
-		if (!(getIngredient().equals(other.getIngredient()))) {
-			throw new RuntimeException("Ingredients must be same");
+		if (!getIngredient().equals(otherPortion.getIngredient())) {
+			throw new RuntimeException("IngredientPortion must be same");
 		}
 		
-		IngredientPortion ingredientPortion = new IngredientPortionImpl(ingredient, amount + other.getAmount());
+		IngredientPortion ingredientPortionObject = new IngredientPortionImpl(ingredient, amount + otherPortion.getAmount());
 		
-		return ingredientPortion;
+		return ingredientPortionObject;
 	}
 	
 }

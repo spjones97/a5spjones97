@@ -1,6 +1,6 @@
-package a5;
+package a4;
 
-// Ingredient interface (DO NOT TOUCH)
+// Ingredient interface
 public interface Ingredient {
 	String getName();
 	double getCaloriesPerDollar();

@@ -1,40 +1,40 @@
-package a5;
+package a4;
 
-// Create Ingredient Implementation class
+// Ingredient implementation class
 public class IngredientImpl implements Ingredient{
 
 	private String ingredientName;
-	private double pricePerOz;
-	private int caloriePerOz;
+	private double pricePerOunce;
+	private int caloriePerOunce;
 	
 	public IngredientImpl(String _name, double _price, int _calories) {
 		ingredientName = _name;
-		pricePerOz = _price;
-		caloriePerOz = _calories;
+		pricePerOunce = _price;
+		caloriePerOunce = _calories;
 	}
 	
-	
+	@Override
 	public String getName() {
 		return ingredientName;
 	}
 
-	
+	@Override
 	public double getCaloriesPerDollar() {
-		double caloriesPerDollar = caloriePerOz / pricePerOz;
+		double caloriesPerDollar = caloriePerOunce / pricePerOunce;
 		return caloriesPerDollar;
 	}
 
-	
+	@Override
 	public int getCaloriesPerOunce() {
-		return caloriePerOz;
+		return caloriePerOunce;
 	}
 
-	
+	@Override
 	public double getPricePerOunce() {
-		return pricePerOz;
+		return pricePerOunce;
 	}
 
-	
+	@Override
 	public boolean equals(Ingredient other) {
 		double subtracted = Math.abs(getPricePerOunce() - other.getPricePerOunce());
 		String name = other.getName();
@@ -47,22 +47,21 @@ public class IngredientImpl implements Ingredient{
 			} return false;
 		} return false;
 	}
-	
-	
-	//Overridden default statements
-	
+
+	@Override
 	public boolean getIsVegetarian() {
 		return false;
 	}
 
-	
+	@Override
 	public boolean getIsRice() {
 		return false;
 	}
 
-	
+	@Override
 	public boolean getIsShellfish() {
 		return false;
 	}
-	
+
+
 }

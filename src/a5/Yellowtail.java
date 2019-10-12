@@ -1,8 +1,6 @@
-package a5;
+package a4;
 
-// Create Yellowtail class
 public class Yellowtail extends IngredientImpl {
-
 	public Yellowtail() {
 		super("yellowtail", 0.74, 57);
 	}
@@ -10,7 +8,6 @@ public class Yellowtail extends IngredientImpl {
 	public boolean getIsRice() {
 		return false;
 	}
-
 	public boolean getIsShellfish() {
 		return false;
 	}

@@ -1,20 +1,16 @@
-package a5;
+package a4;
 
 // Create Eel class
 public class Eel extends IngredientImpl {
 	
-	public Eel() { super("eel", 2.15, 82); }
+	public Eel() {
+		super("eel", 2.15, 82);
+	}
 	
 	public boolean getIsRice() {
 		return false;
 	}
-	
-	public boolean getIsVegetarian() {
-		return false;
-	}
-
-	public boolean getIsShellfish() {
-		return false;
-	}
+	public boolean getIsVegetarian() { return false; }
+	public boolean getIsShellfish() { return false; }
 	
 }

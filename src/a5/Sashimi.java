@@ -1,37 +1,37 @@
-package a5;
+package a4;
 
 // Create Sashimi class
 public class Sashimi implements Sushi{
 	public enum SashimiType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP};
 	
 	protected String ingredientName;
-	protected IngredientPortion[] ingredientArr;
-	protected IngredientPortion ingredientAmount;
+	protected IngredientPortion[] ingredientArray;
+	protected IngredientPortion ingredientAmt;
 	
 	public Sashimi(SashimiType _type) {
 		
-		ingredientArr = new IngredientPortion[1];
+		ingredientArray = new IngredientPortion[1];
 		
 		if (_type == SashimiType.TUNA) {
 			ingredientName = "tuna sashimi";
-			ingredientAmount = new TunaPortion(0.75);
+			ingredientAmt = new TunaPortion(0.75);
 		} else if (_type == SashimiType.YELLOWTAIL) {
 			ingredientName = "yellowtail sashimi";
-			ingredientAmount = new YellowtailPortion(0.75);
+			ingredientAmt = new YellowtailPortion(0.75);
 		} else if (_type == SashimiType.EEL) {
 			ingredientName = "eel sashimi";
-			ingredientAmount = new EelPortion(0.75);
+			ingredientAmt = new EelPortion(0.75);
 		} else if (_type == SashimiType.CRAB) {
 			ingredientName = "crab sashimi";
-			ingredientAmount = new CrabPortion(0.75);
+			ingredientAmt = new CrabPortion(0.75);
 		} else if (_type == SashimiType.SHRIMP) {
 			ingredientName = "shrimp sashimi";
-			ingredientAmount = new ShrimpPortion(0.75);
+			ingredientAmt = new ShrimpPortion(0.75);
 		}
-		ingredientArr[0] = ingredientAmount;
+		ingredientArray[0] = ingredientAmt;
 		
-		for (int i = 0; i < ingredientArr.length; i++) {
-			if (ingredientArr[i] == null) {
+		for (int i=0; i<ingredientArray.length; i++) {
+			if (ingredientArray[i] == null) {
 				throw new RuntimeException("ingredients array can't be null");
 			}
 		}
@@ -46,36 +46,36 @@ public class Sashimi implements Sushi{
 
 	@Override
 	public IngredientPortion[] getIngredients() {
-		return ingredientArr;
+		return ingredientArray;
 	}
 
 	@Override
 	public int getCalories() {
 		double result = 0.0;
-		int integer = 0;
-		for (int i = 0; i < ingredientArr.length; i++) {
-			result = result + ingredientArr[i].getCalories();
+		int calories = 0;
+		for (int i = 0; i < ingredientArray.length; i++) {
+			result = result + ingredientArray[i].getCalories();
 		}
-		integer = (int)(result + 0.5);
+		calories = (int)(result + 0.5);
 		
-		return integer;
+		return calories;
 	}
 
 	@Override
 	public double getCost() {
-		double result = 0.0;
+		double cost = 0.0;
 		
-		for (int i = 0; i < ingredientArr.length; i++) {
-			result = result + ingredientArr[i].getCost();
+		for (int i=0; i<ingredientArray.length; i++) {
+			cost = cost + ingredientArray[i].getCost();
 		}
-		return result;
+		return cost;
 	}
 
 	@Override
 	public boolean getHasRice() {
-		for (int i = 0; i < ingredientArr.length; i++) {
-			if(ingredientArr[i].getIsRice()) {
-			return true;
+		for (int i = 0; i < ingredientArray.length; i++) {
+			if(ingredientArray[i].getIsRice()) {
+				return true;
 			}
 		}
 		return false;
@@ -83,8 +83,8 @@ public class Sashimi implements Sushi{
 
 	@Override
 	public boolean getHasShellfish() {
-		for (int i = 0; i < ingredientArr.length; i++) {
-			if(ingredientArr[i].getIsShellfish()) {
+		for (int i = 0; i < ingredientArray.length; i++) {
+			if(ingredientArray[i].getIsShellfish()) {
 				return true;
 			}
 		}
@@ -93,8 +93,8 @@ public class Sashimi implements Sushi{
 
 	@Override
 	public boolean getIsVegetarian() {
-		for (int i = 0; i < ingredientArr.length; i++) {
-			if(ingredientArr[i].getIsVegetarian()) {
+		for (int i = 0; i < ingredientArray.length; i++) {
+			if(ingredientArray[i].getIsVegetarian()) {
 				return true;
 			}
 		}
