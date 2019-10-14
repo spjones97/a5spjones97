@@ -40,7 +40,7 @@ public class Nigiri implements Sushi{
 		ingredientPortionArr[ingredTwo] = ingredientRiceAmount;
 		
 		
-		for (int i = 0; i< ingredientPortionArr.length; i++) {
+		for (int i = 0; i < ingredientPortionArr.length; i++) {
 			if (ingredientPortionArr[i] == null) {
 				throw new RuntimeException("ingredients array can't be null");
 			}

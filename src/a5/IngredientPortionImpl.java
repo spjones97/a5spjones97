@@ -64,13 +64,13 @@ public class IngredientPortionImpl implements IngredientPortion{
 		if (otherPortion == null) {
 			return this;
 		}
-		if (otherPortion.getAmount()<0) {
-			throw new RuntimeException("IngredientPortion must have the same amount");
+		if (otherPortion.getAmount() < 0) {
+			throw new RuntimeException("other ingredient amount cannot be negative");
 		
 		}
 		
 		if (!(this.getName().equals(otherPortion.getName()))) {
-			throw new IllegalArgumentException("IngredientPortion must be same");
+			throw new IllegalArgumentException("Ingredient must be same");
 		}
 		
 		IngredientPortion ingredientPortionObject = new IngredientPortionImpl(ingredient, amount + otherPortion.getAmount());
