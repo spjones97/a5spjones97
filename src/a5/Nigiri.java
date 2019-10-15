@@ -32,12 +32,12 @@ public class Nigiri implements Sushi{
 			ingredientName = "shrimp nigiri";
 			ingredientAmount = new ShrimpPortion(0.75);
 		}
+
+		int firstIngredient = 0;
+		int secondIngredient = 1;
 		
-		int ingredOne = 0;
-		int ingredTwo = 1;
-		
-		ingredientPortionArr[ingredOne] = ingredientAmount;
-		ingredientPortionArr[ingredTwo] = ingredientRiceAmount;
+		ingredientPortionArr[firstIngredient] = ingredientAmount;
+		ingredientPortionArr[secondIngredient] = ingredientRiceAmount;
 		
 		
 		for (int i = 0; i < ingredientPortionArr.length; i++) {
@@ -62,8 +62,8 @@ public class Nigiri implements Sushi{
 	public int getCalories() {
 		double result = 0;
 		int finalValue = 0;
-		result = ingredientPortionArr[0].getCalories() + ingredientPortionArr[1].getCalories();
 
+		result = ingredientPortionArr[0].getCalories() + ingredientPortionArr[1].getCalories();
 		finalValue = (int)(result + 0.5);
 		
 		return finalValue;

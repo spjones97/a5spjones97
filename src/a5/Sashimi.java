@@ -6,7 +6,7 @@ public class Sashimi implements Sushi{
 	
 	protected String ingredientName;
 	protected IngredientPortion[] ingredientArray;
-	protected IngredientPortion ingredientAmt;
+	protected IngredientPortion ingredientAmount;
 	
 	public Sashimi(SashimiType _type) {
 		
@@ -14,21 +14,21 @@ public class Sashimi implements Sushi{
 		
 		if (_type == SashimiType.TUNA) {
 			ingredientName = "tuna sashimi";
-			ingredientAmt = new TunaPortion(0.75);
+			ingredientAmount = new TunaPortion(0.75);
 		} else if (_type == SashimiType.YELLOWTAIL) {
 			ingredientName = "yellowtail sashimi";
-			ingredientAmt = new YellowtailPortion(0.75);
+			ingredientAmount = new YellowtailPortion(0.75);
 		} else if (_type == SashimiType.EEL) {
 			ingredientName = "eel sashimi";
-			ingredientAmt = new EelPortion(0.75);
+			ingredientAmount = new EelPortion(0.75);
 		} else if (_type == SashimiType.CRAB) {
 			ingredientName = "crab sashimi";
-			ingredientAmt = new CrabPortion(0.75);
+			ingredientAmount = new CrabPortion(0.75);
 		} else if (_type == SashimiType.SHRIMP) {
 			ingredientName = "shrimp sashimi";
-			ingredientAmt = new ShrimpPortion(0.75);
+			ingredientAmount = new ShrimpPortion(0.75);
 		}
-		ingredientArray[0] = ingredientAmt;
+		ingredientArray[0] = ingredientAmount;
 		
 		for (int i=0; i<ingredientArray.length; i++) {
 			if (ingredientArray[i] == null) {
